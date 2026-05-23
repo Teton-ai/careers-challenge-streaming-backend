@@ -7,10 +7,10 @@ This stub will be fleshed out before public release. Until then, treat the spec 
 ## Modes
 
 ```
-baseline     — 5,000 devices × ~1 event/sec each, mixed types
-burst        — 10x burst for 30 seconds, twice during the run
-offline      — 20% of devices go offline for 60 seconds, replay buffered events on reconnect
-adversarial  — combination of the above plus random clock skew
+baseline    , 5,000 devices × ~1 event/sec each, mixed types
+burst       , 10x burst for 30 seconds, twice during the run
+offline     , 20% of devices go offline for 60 seconds, replay buffered events on reconnect
+adversarial , combination of the above plus random clock skew
 ```
 
 ## Transport

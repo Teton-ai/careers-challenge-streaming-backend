@@ -1,4 +1,4 @@
-# Submission — Real-time Streaming Backend
+# Submission, Real-time Streaming Backend
 
 **Your name:**
 **Email:**
@@ -8,7 +8,7 @@
 
 ## Stack and storage
 
-(What you chose, and why — 2–3 sentences each for compute, storage, transport.)
+(What you chose, and why, 2–3 sentences each for compute, storage, transport.)
 
 ## Ordering and late events
 
