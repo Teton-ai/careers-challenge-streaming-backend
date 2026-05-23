@@ -1,7 +1,7 @@
 # Teton Challenge — Real-time Streaming Backend
 
-> **No CV. No prior experience. Just results.**
-> If you can build this well, we want to talk. → `info@teton.ai`
+> **No prior experience required. The solution is the signal.**
+> Every submission gets feedback within 7 days. → `info@teton.ai`
 
 ---
 
@@ -106,8 +106,9 @@ Email **info@teton.ai** with subject **`Solution: Real-time streaming backend`**
    - How you handle backpressure.
    - One thing you would change if you had another week.
 3. How to run your service against `event_generator/` locally.
+4. Your **CV** (attached), plus **LinkedIn** and **GitHub** links so we can put the work in context.
 
-If you hit the bar, you skip the rest of the funnel and talk to engineers.
+**We reply with feedback within 7 days — every submission, no exceptions.** If your work hits the bar, the next step is a conversation with engineers.
 
 ## Notes
 
