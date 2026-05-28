@@ -80,13 +80,42 @@ We run a grader that:
 
 ```
 .
-├── README.md          , this file
-├── SUBMISSION.md      , fill in with your submission
-├── event_generator/   , simulates the 5k devices (single binary or Docker)
-├── eval/              , the scenarios we run plus a ground-truth checker
+├── README.md          - this file
+├── SUBMISSION.md      - fill in with your submission
+├── Makefile           - convenience targets (see `make help`)
+├── event_generator/   - simulates N devices in baseline / burst / offline / adversarial modes
+├── eval/              - scenario runner + scorecard
+├── example_solution/  - a deliberately-bad stub service so you can see
+│                        the read endpoints we expect. Replace with yours.
 └── docs/
-    └── event_schema.md, the full event spec
+    └── event_schema.md  the full event spec
 ```
+
+## Quickstart
+
+Python 3.10+. No pip dependencies.
+
+```bash
+# Terminal 1: start the example stub service (replace with your own later)
+make example
+
+# Terminal 2: run the smoke scenario
+make smoke
+```
+
+The smoke run takes ~30 seconds. The example stub stores everything in memory with no dedup, no late-event handling, no restart correctness — it will score badly on the scorecard. That's the point. Beat it.
+
+Bigger scenarios: `make baseline`, `make burst`, `make offline`, `make adversarial`. Crank devices with `DEVICES=500 make burst`. Point eval at your own service with `make smoke SERVICE_URL=http://localhost:9090`.
+
+The eval expects these read endpoints on your service:
+
+```
+GET /devices/{device_id}/health
+GET /rooms/{room_id}/occupancy?window=1m|5m|1h
+GET /alarms?since=<ts>
+```
+
+The shape that `example_solution/service.py` returns is what the scorer reads. If your endpoints look different, the scorer will warn.
 
 ## What we are **not** looking for
 
