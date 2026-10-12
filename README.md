@@ -76,6 +76,8 @@ We run a grader that:
 
 **Pass bar:** 75. Below it we won't say yes, but we always reply.
 
+We will also read your code. A solution that passes the harness but is unreadable, or relies on a single magic library that does it all for you, scores lower than a clean, well-reasoned solution that's a few percentage points worse on a metric
+
 ## What's in this repo
 
 ```
@@ -143,7 +145,8 @@ Email **info@teton.ai** with subject **`Solution: Real-time streaming backend`**
 
 - Time: strong candidates spend 10–25 hours on this. Spend more if you want.
 - Stack: any language, any database, any message broker. We will run it locally, say so if you need Docker Compose, Nix, or just `make run`.
-- LLMs: use them as you would on any other day. We don't care how you got there. We care that you can explain every choice.
+- LLMs: use them as you normally would. We don't care how you get there, we care that you understand every line you ship and the choices behind it.
+
 
 Good luck.
 
